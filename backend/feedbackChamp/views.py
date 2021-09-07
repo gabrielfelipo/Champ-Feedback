@@ -1,8 +1,8 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from .models import champs
+from rest_framework.viewsets import ModelViewSet
+from .serializers import champsSerializer
 
 # Create your views here.
-
-def index(request):
-    champs = []
-    return JsonResponse(champs, safe=False)
+class champsViewSet(ModelViewSet):
+    queryset = champs.objects.all()
+    serializer_class = champsSerializer
