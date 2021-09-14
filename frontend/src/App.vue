@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-
+    <div class="sideBar">
+      <NavBar Msg=""/>
+    </div>
+    <div class="form-table">
     <form @submit.prevent="createfeedback">
       <div class="row g-3">
         <div class="col">
@@ -17,13 +20,14 @@
         </div>
       </div>
     </form>
+    </div>
 
 
     <table class="table">
         <thead>
-           <th>Name</th>
-           <th>Rating</th>
-           <th>Comment</th>
+          <th>Name</th>
+          <th>Rating</th>
+          <th>Comment</th>
         </thead>
         <tbody>
           <tr v-for="feedback in feedbacks" :key="feedback.id">
@@ -36,11 +40,20 @@
   </div>
 </template>
 
+
+
+
 <script>
 
+import NavBar from './components/NavBar.vue'
+//import SendFeedback from './components/SendFeedback.vue'
+//import GetFeedback from './components/GetFeedback.vue'
 
 export default {
   name: 'App',
+  components: {
+    NavBar,
+  },
   data(){
     return {
       feedback: {
@@ -77,6 +90,9 @@ export default {
 }
 </script>
 
+
+
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -84,6 +100,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.sideBar {
+  position: absolute;
+  height: 100%;
+}
+
+.form-table {
+  position: relative;
+  left: 7vh;
+  top: 10vh;
+  z-index: -1;
 }
 </style>
