@@ -1,4 +1,5 @@
 <template>
+<div class="get">
     <table class="table">
         <thead>
             <th>Name</th>
@@ -13,6 +14,7 @@
             </tr>
         </tbody>
     </table>
+</div>
 </template>
 
 <script>
@@ -33,8 +35,12 @@ export default {
 
 
 <style scoped>
+.get {
+    max-width: 800px;
+}
 .table {
-    width: 500px;
-    right: 0px;
+    margin-left: 12vh;
+    margin-right: 12vh;
+
 }
 </style>
