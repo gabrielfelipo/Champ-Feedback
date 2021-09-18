@@ -6,6 +6,7 @@
         <div>
             <h1>About us</h1>
             <p>Project made to learn two great frameworks that are very used, vue, which was used for the project's frontend, and django, used in the project's backend along with its database, dbsqlite3. The project idea is a web page to view and send feedback on league of legends champions.</p>
+            <button>Feedback</button>
         </div>
         <div id="effect-right"/>
         <div id="effect-left"/>
@@ -26,6 +27,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
 
 h1 {
+    font-family: 'Merriweather Sans', sans-serif;
     position: absolute;
     width: 25%;
     right: 20%;
@@ -35,9 +37,10 @@ h1 {
     color: #95b8e5;
 }
 p {
+    font-family: 'Merriweather Sans', sans-serif;
     position: absolute;
-    width: 25%;
-    right: 20%;
+    width: 55vh;
+    right: 18.5%;
     top: 32%;
     font-size: 120%;
     text-align: left;
@@ -90,4 +93,26 @@ p {
     background-repeat: no-repeat;
     opacity: 9%;
 }
+button {
+    font-family: 'Merriweather Sans', sans-serif;
+    position: absolute;
+    border: 0;
+    color: #bddaff;
+    background-image: linear-gradient(to right top, #44258b, #403294, #3c3e9c, #3949a4, #3653ab, #3355a9, #3156a8, #2f58a6, #2a519d, #254b93, #20448a, #1a3e81);
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 4vh;
+    margin-top: 20px;
+    transition: 0.3s;
+    height: 7%;
+    width: 35vh;
+    right: 25.5%;
+    top: 73%;
+}
+
+button:hover {
+    opacity: 0.8;
+    color: #ffffff;
+}
+
 </style>
