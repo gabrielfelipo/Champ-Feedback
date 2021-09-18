@@ -3,6 +3,10 @@
         <NavBar/>
         <div id="gradient"/>
         <div id="image"/>
+        <div>
+            <h1>About us</h1>
+            <p>Project made to learn two great frameworks that are very used, vue, which was used for the project's frontend, and django, used in the project's backend along with its database, dbsqlite3. The project idea is a web page to view and send feedback on league of legends champions.</p>
+        </div>
         <div id="effect-right"/>
         <div id="effect-left"/>
     </body>
@@ -19,6 +23,27 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+
+h1 {
+    position: absolute;
+    width: 25%;
+    right: 20%;
+    top: 22%;
+    font-size: 10vh;
+    text-align: left;
+    color: #95b8e5;
+}
+p {
+    position: absolute;
+    width: 25%;
+    right: 20%;
+    top: 32%;
+    font-size: 120%;
+    text-align: left;
+    padding-top: 3vh;
+    color: #599df7;
+}
 #gradient {
     position: absolute;
     height: 100%;
